@@ -6,13 +6,13 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 23:50:59 by mhornero          #+#    #+#             */
-/*   Updated: 2022/08/10 04:12:13 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/08/15 19:19:24 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_get_num_words(char const *s, char c)
+/*size_t	ft_get_num_words(char const *s, char c)
 {
 	char	*aux;
 	size_t	n_words;
@@ -115,4 +115,4 @@ char	**ft_split(char const *s, char c)
 	printf("Ret %d es : %s\n", i, ret[i]);
 	free(len_words);
 	return (ret);
-}
+}*/
