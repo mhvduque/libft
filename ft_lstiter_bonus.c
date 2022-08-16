@@ -1,49 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 17:25:19 by mhornero          #+#    #+#             */
-/*   Updated: 2022/08/16 05:26:10 by mhornero         ###   ########.fr       */
+/*   Created: 2022/08/15 23:43:22 by mhornero          #+#    #+#             */
+/*   Updated: 2022/08/16 03:41:17 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_abs_value(int n)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (n < 0)
-		n *= -1;
-	return (n);
-}
+	t_list	*aux;
 
-void	ft_putnbr_fd(int n, int fd)
-{
-	char	nbr[13];
-	int		len;
-	int		n_flag;
-
-	n_flag = 0;
-	if (n < 0)
-		n_flag = 1;
-	ft_bzero(nbr, 13);
-	if (n == 0)
-	{
-		write(fd, "0", 1);
+	if (!lst || !f)
 		return ;
-	}
-	len = 0;
-	while (n != 0)
+	aux = lst;
+	while (aux)
 	{
-		nbr[len++] = '0' + ft_abs_value(n % 10);
-		n = (n / 10);
+		f(aux->content);
+		aux = aux->next;
 	}
-	if (n_flag)
-		nbr[len] = '-';
-	else if (len > 0)
-		len--;
-	while (len >= 0)
-		write(fd, &nbr[len--], 1);
+	return ;
 }
