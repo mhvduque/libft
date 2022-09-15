@@ -6,7 +6,7 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 04:13:51 by mhornero          #+#    #+#             */
-/*   Updated: 2022/08/08 21:18:46 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/09/14 17:34:44 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 
 	if (!s1)
 		return (0);
-	s2 = ft_calloc(ft_strlen((char *)s1), sizeof(char));
+	s2 = ft_calloc(ft_strlen((char *)s1) + 1, sizeof(char));
 	if (!s2)
 		return (0);
 	ft_strlcpy(s2, s1, ft_strlen((char *)s1) + 1);

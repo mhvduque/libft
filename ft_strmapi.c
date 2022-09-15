@@ -6,7 +6,7 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 16:47:23 by mhornero          #+#    #+#             */
-/*   Updated: 2022/08/15 16:55:47 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/09/14 17:39:00 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (0);
 	i = 0;
-	ret = ft_calloc(ft_strlen((char *)s), sizeof(char));
+	ret = ft_calloc(ft_strlen((char *)s) + 1, sizeof(char));
 	if (!ret)
 		return (0);
 	while (i < ft_strlen((char *)s))
