@@ -31,11 +31,11 @@ as a 42 Student and while on the journey of learning CLang, we are asked to impl
 | ft_strlcpy.c  |  |  |
 
 before turning in:
-- declare aux functions as 'static'
-- check tests
-- check norm and git when uploaded
+- declare aux functions as 'static' ✔️
+- check tests ✔️
+- check norm and git when uploaded ✔️
 
 for testing the project, some good resources:
-- Libft Tripouille Tester: https://github.com/Tripouille/libftTester
-- Libft War Machine: https://github.com/y3ll0w42/libft-war-machine
-- Libft Unit Test: https://github.com/alelievr/libft-unit-test
+- **Libft Tripouille Tester:** https://github.com/Tripouille/libftTester
+- **Libft War Machine:** https://github.com/y3ll0w42/libft-war-machine
+- **Libft Unit Test:** https://github.com/alelievr/libft-unit-test
