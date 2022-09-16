@@ -34,3 +34,8 @@ before turning in:
 - declare aux functions as 'static'
 - check tests
 - check norm and git when uploaded
+
+for testing the project, some good resources:
+- Libft Tripouille Tester: https://github.com/Tripouille/libftTester
+- Libft War Machine: https://github.com/y3ll0w42/libft-war-machine
+- Libft Unit Test: https://github.com/alelievr/libft-unit-test
