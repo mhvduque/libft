@@ -6,13 +6,13 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 19:55:03 by mhornero          #+#    #+#             */
-/*   Updated: 2022/09/14 17:37:43 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:25:37 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == ' ' || c == '	' || c == '\v')
 		return (1);

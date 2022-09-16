@@ -6,13 +6,13 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 15:35:05 by mhornero          #+#    #+#             */
-/*   Updated: 2022/09/15 17:36:50 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:27:02 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_inset(char c, const char *set)
+static int	ft_inset(char c, const char *set)
 {
 	char	*aux;
 

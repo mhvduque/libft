@@ -6,13 +6,13 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 17:25:19 by mhornero          #+#    #+#             */
-/*   Updated: 2022/08/16 05:26:10 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:26:25 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_abs_value(int n)
+static int	ft_abs_value(int n)
 {
 	if (n < 0)
 		n *= -1;

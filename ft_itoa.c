@@ -6,13 +6,13 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 16:45:16 by mhornero          #+#    #+#             */
-/*   Updated: 2022/08/16 04:31:28 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:26:02 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_get_len(int n)
+static size_t	ft_get_len(int n)
 {
 	size_t	len;
 
@@ -30,7 +30,7 @@ size_t	ft_get_len(int n)
 	return (len);
 }
 
-char	*ft_itoa_aloc(size_t len, int n)
+static char	*ft_itoa_aloc(size_t len, int n)
 {
 	char	*ret;
 
