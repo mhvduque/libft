@@ -6,7 +6,7 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 19:55:03 by mhornero          #+#    #+#             */
-/*   Updated: 2022/09/16 12:25:37 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/09/26 17:18:39 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,29 @@ static int	ft_isspace(char c)
 
 int	ft_atoi(const char *nbr)
 {
-	int		ret;
+	long	ret;
 	int		parity;
 	char	*n;
 
 	ret = 0;
 	parity = 1;
 	n = (char *)nbr;
-	if (!n)
-		return (0);
 	while (ft_isspace(*n))
 		n++;
-	if (*n == '-' && ft_isdigit(*(n + 1)))
+	if (*n == '-' || *n == '+')
 	{
+		if (*n == '-')
+			parity = -1;
 		n++;
-		parity = -1;
 	}
-	else if (*n == '+' && ft_isdigit(*(n + 1)))
-		n++;
 	while (ft_isdigit(*n))
-			ret = ret * 10 + (*n++ - '0');
+	{
+		ret = ret * 10 + (*n++ - '0');
+		if (ret > 2147483657 && parity == 1)
+			return (-1);
+		else if (ret > 2147483648 && parity == -1)
+			return (0);
+	}
 	return (ret * parity);
 }
+
