@@ -6,7 +6,7 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 19:55:03 by mhornero          #+#    #+#             */
-/*   Updated: 2022/09/26 17:18:39 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/09/26 17:19:51 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,3 @@ int	ft_atoi(const char *nbr)
 	}
 	return (ret * parity);
 }
-
