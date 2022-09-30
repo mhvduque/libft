@@ -6,7 +6,7 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 18:47:33 by mhornero          #+#    #+#             */
-/*   Updated: 2022/09/14 17:03:54 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/09/30 18:36:08 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	d = dest;
 	s = src;
-	while (n-- && d && s)
+	if (!d && !s)
+		return (0);
+	while (n--)
 		*d++ = *s++;
 	return (dest);
 }

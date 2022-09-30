@@ -6,7 +6,7 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 19:49:49 by mhornero          #+#    #+#             */
-/*   Updated: 2022/09/15 17:46:57 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/09/30 19:31:43 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t len)
 	size_t	aux;
 
 	ret = 0;
-	if (!src || !dst)
-		return (0);
+	if (!len)
+		return (ft_strlen((char *)src));
 	while (dst[ret] != '\0' && ret < len)
 		ret++;
 	s = (char *)src;

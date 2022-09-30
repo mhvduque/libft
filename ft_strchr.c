@@ -6,7 +6,7 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 04:37:50 by mhornero          #+#    #+#             */
-/*   Updated: 2022/08/05 13:22:02 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/09/30 18:39:07 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strchr(const char *s, int c)
 
 	d = (unsigned char *)s;
 	t = 0;
-	if (!d)
-		return (t);
 	while (*d != '\0')
 	{
 		if (*d == (unsigned char)c)

@@ -15,17 +15,21 @@ RANLIB = ranlib $(NAME)
 
 DEPS= libft.h
 
+ifdef WITH_BONUS
+	OBJ_FILES = $(OBJ) $(OBJ_BONUS)
+else
+	OBJ_FILES = $(OBJ)
+endif
+
 all: $(NAME)
 
 $(NAME): $(DEPS)	
-	@$(COMPILE) $(SRC)
-	@$(LIB) $(OBJ)
-	@$(RANLIB)
+	$(COMPILE) $(SRC)
+	$(LIB) $(OBJ_FILES)
+	$(RANLIB)
 
-bonus: $(DEPS)
-	@$(COMPILE) $(SRC) $(SRC_BONUS)
-	@$(LIB) $(OBJ) $(OBJ_BONUS)
-	@$(RANLIB)
+bonus:
+	@$(MAKE) WITH_BONUS=1 all
 
 clean:
 			$(REMOVE) $(OBJ) $(OBJ_BONUS)
