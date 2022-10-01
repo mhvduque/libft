@@ -6,7 +6,7 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 23:46:06 by mhornero          #+#    #+#             */
-/*   Updated: 2022/08/16 03:40:50 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/10/01 17:00:45 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*first;
 	t_list	*elem;
 
-	if (!del || !f)
-		return (0);
 	first = 0;
 	while (lst)
 	{

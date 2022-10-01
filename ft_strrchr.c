@@ -6,29 +6,26 @@
 /*   By: mhornero mhornero@student.42madrid.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 13:19:26 by mhornero          #+#    #+#             */
-/*   Updated: 2022/09/30 18:44:33 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/10/01 17:36:10 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-	char			*t;
-	unsigned char	*d;
+	size_t	i;
+	char	*ret;
 
-	d = (unsigned char *)s;
-	t = 0;
-	while (*d != '\0')
+	i = 0;
+	ret = 0;
+	while (s[i])
 	{
-		if (*d == (unsigned char)c)
-			t = (char *)d;
-		d++;
+		if (s[i] == (unsigned char)c)
+			ret = (char *)&s[i];
+		i++;
 	}
-	if (c == '\0')
-	{
-		t = (char *)d;
-		return (t);
-	}
-	else if (!t)
-		return (0);
-	return (t);
+	if (s[i] == (unsigned char)c)
+		ret = (char *)&s[i];
+	return (ret);
 }
