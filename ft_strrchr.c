@@ -6,7 +6,7 @@
 /*   By: mhornero <mhornero@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 13:19:26 by mhornero          #+#    #+#             */
-/*   Updated: 2022/12/13 23:46:06 by mhornero         ###   ########.fr       */
+/*   Updated: 2022/12/13 23:52:08 by mhornero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
-	char	*ret;
+	unsigned char	*d;
+	char			*t;
 
 	d = (unsigned char *)s;
 	t = 0;
@@ -28,8 +28,4 @@ char	*ft_strrchr(const char *s, int c)
 	if (*d == (unsigned char)c)
 		t = (char *)d;
 	return (t);
-}
-	if (s[i] == (unsigned char)c)
-		ret = (char *)&s[i];
-	return (ret);
 }
